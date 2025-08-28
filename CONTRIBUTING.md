@@ -18,13 +18,14 @@ Gracias por tu interés 🙌. Este repo está pensado para ser simple y reproduc
 
 ## Estilo / calidad
 - Markdown simple y claro (español).
-- Evitar archivos grandes en el repo (usar `/images` para capturas).
-- Mantener consistencia de badges y secciones (README).
+- Mantener consistencia de badges y secciones en README.
+- Código Python con funciones pequeñas y tipado donde sume claridad.
+- Tests para cualquier cambio en el flujo de logging/metrics.
 
 ## CI
 Los PRs deben quedar en **verde**:
-- Linter / tests del proyecto (según repo).
-- Validaciones (p.ej. `docker compose config`, `terraform fmt/validate`, `helm lint`, `pytest`, etc).
+- Entrenamiento (`python -m src.train`) con backend `file://`
+- Tests (`pytest -q`) verificando que se registren métricas y artifacts en MLflow
 
 ## Licencia
 Al contribuir aceptás que tu aporte se publica bajo **MIT** (ver `LICENSE`).
