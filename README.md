@@ -30,3 +30,10 @@ El workflow ejecuta:
 
 ## Relación con otros repos
 - Complementa un pipeline “mini” (artefactos y métricas en archivos) al mostrar tracking de experimentos y UI.
+
+## Créditos
+
+Repositorio de portfolio por **@mariano-tp**.
+
+Ver también: [Código de Conducta](./CODE_OF_CONDUCT.md) · [Contribuir](./CONTRIBUTING.md) · [Seguridad](./SECURITY.md)
+
