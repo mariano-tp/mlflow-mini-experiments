@@ -32,8 +32,13 @@ def main():
         mlflow.log_metric("accuracy", acc)
         mlflow.log_metric("f1", f1)
 
-        # Guarda el modelo como artifact
+        # Guarda el modelo como artifact (nombre "model")
+        # Nota: MLflow >=2.14 depreca "artifact_path" en favor de "name",
+        # pero este uso sigue funcionando y mantiene compatibilidad.
         mlflow.sklearn.log_model(model, artifact_path="model")
+
+        # Aseguramos un artifact sencillo para el test (independiente del formato del modelo)
+        mlflow.log_text("ok", "marker.txt")
 
         # Umbral mínimo para “sanity check” del demo
         if acc < 0.7:
