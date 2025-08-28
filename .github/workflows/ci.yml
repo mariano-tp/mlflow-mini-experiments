@@ -21,9 +21,13 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run training (file backend)
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: |
-          export MLFLOW_TRACKING_URI="file://$GITHUB_WORKSPACE/mlruns_ci"
+          export MLFLOW_TRACKING_URI="file://${{ github.workspace }}/mlruns_ci"
           python -m src.train
 
       - name: Run tests
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: pytest -q
