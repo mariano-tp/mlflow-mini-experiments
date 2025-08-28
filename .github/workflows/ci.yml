@@ -23,9 +23,8 @@ jobs:
       - name: Run training (file backend)
         env:
           PYTHONPATH: ${{ github.workspace }}
-        run: |
-          export MLFLOW_TRACKING_URI="file://${{ github.workspace }}/mlruns_ci"
-          python -m src.train
+          MLFLOW_TRACKING_URI: file://${{ github.workspace }}/mlruns_ci
+        run: python -m src.train
 
       - name: Run tests
         env:
