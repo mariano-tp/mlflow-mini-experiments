@@ -32,13 +32,10 @@ def main():
         mlflow.log_metric("accuracy", acc)
         mlflow.log_metric("f1", f1)
 
-        # Log del modelo bajo artifacts/model (para compatibilidad con el test actual)
-        # En MLflow >=2.14 "artifact_path" está deprecado a favor de "name",
-        # pero se mantiene para compatibilidad.
+        # Log del modelo bajo artifacts/model (compatibilidad con tests)
         mlflow.sklearn.log_model(model, artifact_path="model")
 
-        # Garantizamos presencia de al menos un archivo dentro de artifacts/model/**
-        # (independiente de cómo serialice mlflow la carpeta del modelo)
+        # Garantizamos un archivo dentro de model para que haya contenido visible
         mlflow.log_text("ok", "model/marker.txt")
 
         # Umbral mínimo para “sanity check” del demo
