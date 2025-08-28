@@ -30,3 +30,8 @@ jobs:
         env:
           PYTHONPATH: ${{ github.workspace }}
         run: pytest -q
+
+      - name: Debug artifacts (temporal)
+        run: |
+          echo "Listing mlruns_ci:"
+          find "${{ github.workspace }}/mlruns_ci" -maxdepth 5 -type f -print || true
