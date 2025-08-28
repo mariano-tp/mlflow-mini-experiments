@@ -1,3 +1,10 @@
+![CI](https://github.com/mariano-tp/mlflow-mini-experiments/actions/workflows/ci.yml/badge.svg?branch=main&style=flat-square)
+![Last commit](https://img.shields.io/github/last-commit/mariano-tp/mlflow-mini-experiments?style=flat-square)
+![Release](https://img.shields.io/github/v/release/mariano-tp/mlflow-mini-experiments?style=flat-square)
+![License](https://img.shields.io/github/license/mariano-tp/mlflow-mini-experiments?style=flat-square)
+![Stars](https://img.shields.io/github/stars/mariano-tp/mlflow-mini-experiments?style=flat-square)
+
+
 # MLflow Mini Experiments
 
 Demostración mínima de MLOps con MLflow: entrenamiento reproducible, logging de parámetros/métricas/artefactos y UI local vía Docker Compose. Pensado para complementar un pipeline simple sin requerir cloud.
